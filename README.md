@@ -1,5 +1,14 @@
 # Codesandboy Clickdummy container workshop
 
+## Prerequisites
+
+You need to have [Docker installed locally](https://docs.docker.com/get-docker/).
+
+## Basic Commands
+
+Build & Run Development Image: `docker-compose -f docker-compose.yml up`
+Build & Run Production Image: `docker-compose -f docker-compose-prod.yml up`
+
 ## React 
 
 [Everything you need to know about React scripts](https://blog.logrocket.com/everything-you-need-to-know-about-react-scripts/)
