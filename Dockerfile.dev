@@ -1,0 +1,8 @@
+FROM node:16-bullseye-slim
+
+WORKDIR /app
+ADD package.json /app 
+RUN npm i --legacy-peer-deps --silent
+ADD . /app 
+
+CMD npm start

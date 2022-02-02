@@ -1,0 +1,19 @@
+# Define the version of Docker Compose to be used
+version: "3.8"
+# List of individual services to be created and started
+services:
+  # Create & Start the React frontend 
+  # All paths start relative to the location of the docker-compose.yml file  
+  frontend-prod:
+    build:
+      # This directory is the frontend build context that is sent to the Docker daemon.
+      context: .
+      # Frontend Dockerfile 
+      dockerfile: ./Dockerfile.prod
+    # Expose Nginx port to host machine
+    ports:
+      - "80:80"
+      # Read more about volumes in Docker: https://docs.docker.com/storage/volumes/
+    volumes:
+      # Prevent node_modules to be installed on the host machine 
+      - "/app/node_modules"
